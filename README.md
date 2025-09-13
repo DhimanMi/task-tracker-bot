@@ -1,4 +1,4 @@
-<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/2b3e28cb-c42d-4cde-91df-d1ee85291440" /># Telegram Task Tracker Bot
+# Telegram Task Tracker Bot
 
 <p align="center"> <img src="https://i.redd.it/v7g6ime1wtk61.jpg" alt="Telegram Task Tracker Banner" style="max-width: 100%; height: auto; border-radius: 8px;" /> </p>
 
