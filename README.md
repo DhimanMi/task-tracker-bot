@@ -1,13 +1,15 @@
 # Telegram Task Tracker Bot
 
-<div style="display: flex; align-items: flex-start; gap: 10px;">
-  <div style="flex: 7;">
-    <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Google Sheet" style="height: 300px; object-fit: contain; border-radius: 8px;" />
-  </div>
-  <div style="flex: 3;">
-    <img src="https://i.ibb.co/Q7Gr2NW8/image.png" alt="Telegram Bot" style="height: 300px; object-fit: contain; border-radius: 8px;" />
-  </div>
-</div>
+<table>
+  <tr>
+    <td>
+      <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Google Sheet" height="300" style="object-fit: contain; border-radius: 8px;" />
+    </td>
+    <td>
+      <img src="https://i.ibb.co/Q7Gr2NW8/image.png" alt="Telegram Bot" height="300" style="object-fit: contain; border-radius: 8px;" />
+    </td>
+  </tr>
+</table>
 
 ## Описание
 
