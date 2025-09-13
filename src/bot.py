@@ -10,7 +10,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from config import BOT_TOKEN, DB_PATH, GOOGLE_SA_FILE, SHEET_ID, ADMIN_IDS
 from db import DB
 from search import find_similar_titles
-from google_sheets import export_tasks_to_sheet  # должен вернуть либо URL, либо {'url':..., 'tab':...}
+from google_sheets import export_tasks_to_sheet
 
 logging.basicConfig(level=logging.INFO)
 
@@ -83,7 +83,6 @@ async def add_task_category(message: types.Message, state: FSMContext):
         await message.reply("Возврат в главное меню.", reply_markup=main_menu(message.from_user.id))
         return
 
-    # Проверяем выбранную категорию по русскому названию
     category = next((k for k, v in CATEGORY_RU.items() if v == text), None)
     if not category:
         await message.reply("Неизвестная категория. Выберите из списка.")
@@ -296,10 +295,6 @@ async def export_worker(user_id: int, username: str, tasks: list):
     Здесь: запускаем в event loop и используем to_thread для вызова blocking-IO кода.
     """
     try:
-        # Предполагаем, что export_tasks_to_sheet возвращает:
-        # - строку с URL, или
-        # - dict {'url': ..., 'tab': ...}, или
-        # - {'gid': ...} / {'tab_name': ...}
         result = await asyncio.to_thread(export_tasks_to_sheet, GOOGLE_SA_FILE, SHEET_ID, tasks, username)
         sheet_url: Optional[str] = None
         extra_info = None
@@ -307,7 +302,6 @@ async def export_worker(user_id: int, username: str, tasks: list):
         if isinstance(result, str):
             sheet_url = result
         elif isinstance(result, dict):
-            # попытка извлечь URL или построить ссылку
             sheet_url = result.get("url")
             extra_info = result.get("tab") or result.get("gid") or result.get("tab_name")
             if not sheet_url and SHEET_ID:
@@ -323,7 +317,7 @@ async def export_worker(user_id: int, username: str, tasks: list):
                 text += f"\nВкладка: {extra_info}"
             await safe_send(user_id, text, reply_markup=main_menu(user_id))
         else:
-            # если ничего не удалось извлечь — просто уведомим
+            # если ничего не удалось извлечь
             await safe_send(user_id, "✅ Экспорт завершён, но ссылка не получена. Проверьте Google Sheets.", reply_markup=main_menu(user_id))
 
     except Exception as e:
@@ -354,7 +348,7 @@ async def export_tasks(message: types.Message):
         await message.reply("Нет задач для экспорта.", reply_markup=main_menu(message.from_user.id))
         return
 
-    # запустим экспорт в фоне — пользователь получит уведомление, когда экспорт завершится с ссылкой
+    # экспорт в фоне — пользователь получит уведомление, когда экспорт завершится с ссылкой
     await message.reply("Экспорт задач запущен в фоне. Я пришлю ссылку, когда всё будет готово.", reply_markup=main_menu(message.from_user.id))
 
     # в проде: запустить задание в очереди (Celery/RQ). Здесь — легковесный фон внутри процесса:
