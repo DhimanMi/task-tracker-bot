@@ -1,6 +1,6 @@
 # Telegram Task Tracker Bot
 
-<p align="center"> <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Telegram Task Tracker Banner" style="max-width: 100%; height: auto; border-radius: 8px;" /> </p>
+<p align="center"> <img src="https://i.ibb.co/2YpczpRx/imgonline-com-ua-2to1-Rs-TF0q432-Qm-J1.png" alt="Telegram Task Tracker Banner" style="max-width: 100%; height: auto; border-radius: 8px;" /> </p>
 
 ## Описание
 
@@ -151,6 +151,3 @@ python bot.py
 ## Лицензия
 
 MIT License
-Если хочешь, я могу сделать ещё **отдельный блок “Локальная разработка и тестирование”**, где будет подробно описано, как подключать Google Sheets и базу без Docker, прямо для MVP.  
-
-Хочешь, чтобы я 
