@@ -2,11 +2,11 @@
 
 <table>
   <tr>
-    <td>
-      <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Google Sheet" height="300" style="object-fit: contain; border-radius: 8px;" />
+    <td width="70%">
+      <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Google Sheet" style="width:100%; height:300px; object-fit: cover; border-radius: 8px;" />
     </td>
-    <td>
-      <img src="https://i.ibb.co/Q7Gr2NW8/image.png" alt="Telegram Bot" height="300" style="object-fit: contain; border-radius: 8px;" />
+    <td width="30%">
+      <img src="https://i.ibb.co/Q7Gr2NW8/image.png" alt="Telegram Bot" style="width:100%; height:300px; object-fit: cover; border-radius: 8px;" />
     </td>
   </tr>
 </table>
