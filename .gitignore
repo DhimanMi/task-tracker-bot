@@ -1,0 +1,13 @@
+env files
+.env
+secrets
+/secrets/
+*.json
+python cache
+*.pyc
+pycache/
+sqlite database
+/data/
+*.db
+docker
+*.log

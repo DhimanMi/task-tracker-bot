@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  bot:
+    build: .
+    container_name: tasktracker_bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - DB_PATH=/data/tasks.db
+      - GOOGLE_SA_FILE=/secrets/google_sa.json
+      - SHEET_ID=${SHEET_ID}
+      - ADMIN_IDS=${ADMIN_IDS}
+    volumes:
+      - ./data:/data
+      - ./secrets:/secrets:ro

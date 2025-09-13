@@ -1,0 +1,6 @@
+aiogram==2.25.2
+aiosqlite==0.18.0
+google-api-python-client==2.86.0
+google-auth==2.21.0
+rapidfuzz==3.14.1
+python-dotenv==1.0.0
