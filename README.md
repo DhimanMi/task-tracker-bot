@@ -1,15 +1,6 @@
 # Telegram Task Tracker Bot
 
-<table>
-  <tr>
-    <td width="70%">
-      <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Google Sheet" style="width:100%; height:300px; object-fit: cover; border-radius: 8px;" />
-    </td>
-    <td width="30%">
-      <img src="https://i.ibb.co/Q7Gr2NW8/image.png" alt="Telegram Bot" style="width:100%; height:300px; object-fit: cover; border-radius: 8px;" />
-    </td>
-  </tr>
-</table>
+<p align="center"> <img src="https://i.ibb.co/cX3TxkYC/image.png" alt="Telegram Task Tracker Banner" style="max-width: 100%; height: auto; border-radius: 8px;" /> </p>
 
 ## Описание
 
