@@ -1,6 +1,6 @@
 # Telegram Task Tracker Bot
 
-<p align="center"> <img src="https://ik.imagekit.io/xkrqavoss/header.png?updatedAt=1757790635315" alt="Telegram Task Tracker Banner" style="max-width: 100%; height: auto; border-radius: 8px;" /> </p>
+<p align="center"> <img src="https://ik.imagekit.io/xkrqavoss/Headers/task-tracker-bot.png?updatedAt=1757917505868" alt="Telegram Task Tracker Banner" style="max-width: 100%; height: auto; border-radius: 8px;" /> </p>
 
 ## Описание
 
